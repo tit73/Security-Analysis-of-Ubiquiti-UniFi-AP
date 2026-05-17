@@ -18,8 +18,6 @@
 | SSH uses deprecated `ssh-rsa` | Low | Needs client workaround `-o HostKeyAlgorithms=+ssh-rsa` |
 | No web interface active | Informational | Only SSH and discovery services |
 
-**Overall CVSS v3.1 (network access)**: **9.8 (Critical)**  
-`AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H`
 
 ## Evidence
 
