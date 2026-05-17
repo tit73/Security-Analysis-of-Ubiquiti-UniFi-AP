@@ -1,0 +1,8 @@
+cat /proc/mtd
+
+dev: size erasesize name
+mtd0: 00040000 00010000 "u-boot"
+mtd1: 00010000 00010000 "u-boot-env"
+mtd2: 00760000 00010000 "kernel"
+mtd3: 00040000 00010000 "cfg"
+mtd4: 00010000 00010000 "EEPROM"
