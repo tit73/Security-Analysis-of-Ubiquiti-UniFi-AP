@@ -1,0 +1,130 @@
+
+---
+
+## 📄 3. `evidence/uart_boot.log`
+
+```markdown
+# UART Boot Log (full capture)
+
+```text
+Terminal ready
+
+U-Boot unifi-v1.6.17.296-g1af7670c (Apr 22 2019 - 11:05:55)
+
+DRAM:  64 MB
+Base:0x80000000, Top:0x84000000, Res logbuf:0xa3ff3800, log_magic:0xa7b9bffb kseg: 0xa0000000
+Flash:  8 MB
+PCIe WLAN Module found (tries: 1).
+Net:   eth0, eth1
+Board: Copyright Ubiquiti Networks Inc. 2014
+Hit any key to stop autoboot:  0
+Board: Ubiquiti Networks AR7241 board (e502-18.0101.002e)
+ 0. Name = u-boot, offset = 0, start_addr=9f000000, size=262144,start_sector=0, end_sector=3
+ 1. Name = u-boot-env, offset = 40000, start_addr=9f040000, size=65536,start_sector=4, end_sector=4
+ 2. Name = kernel, offset = 50000, start_addr=9f050000, size=7733248,start_sector=5, end_sector=122
+ 3. Name = cfg, offset = 7b0000, start_addr=9f7b0000, size=262144,start_sector=123, end_sector=126
+ 4. Name = EEPROM, offset = 7f0000, start_addr=9f7f0000, size=65536,start_sector=127, end_sector=127
+UBNT application initialized
+## Booting image at 9f050000 ...
+   Image Name:   Ubiquiti Linux-4.4.153
+   Created:      2018-08-30  12:10:54 UTC
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    7009765 Bytes =  6.7 MB
+   Load Address: 80060000
+   Entry Point:  80060000
+   Verifying Checksum at 0x9f050040 ...OK
+   Uncompressing Kernel Image ... OK
+
+Starting kernel ...
+
+[    0.000000] Linux version 4.4.153 (builder@link-owrt1505-builder) (gcc version 5.4.0 (LEDE GCC 5.4.0 r3979-2252731af4) ) #0 Thu Aug 30 12:10:54 2018
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 00019374 (MIPS 24Kc)
+[    0.000000] SoC: Atheros AR7241 rev 1
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 04000000 @ 00000000 (usable)
+[    0.000000] User-defined physical RAM map:
+[    0.000000]  memory: 03ff3800 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] No valid device tree found, continuing without
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x0000000000000000-0x0000000003ff2fff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000003ff2fff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000003ff2fff]
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16243
+[    0.000000] Kernel command line: console=tty0 panic=3 mtdparts=ar7240-nor0:256k(u-boot),64k(u-boot-env),7552k(kernel),256k(cfg),64k(EEPROM) mem=65486K ubootver=unifi-v1.6.17.296-g1af7670c ramoops.mem_address=0x3ff3800 ramoops.mem_size=51200 ramoops.record_size=24576 rootfstype=squashfs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 54928K/65484K available (2856K kernel code, 147K rwdata, 316K rodata, 5952K init, 266K bss, 10556K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Clocks: CPU:400.000MHz, DDR:400.000MHz, AHB:200.000MHz, Ref:40.000MHz
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 9556302233 ns
+[    0.000013] sched_clock: 32 bits at 200MHz, resolution 5ns, wraps every 10737418237ns
+[    0.007879] Calibrating delay loop... 265.42 BogoMIPS (lpj=1327104)
+[    0.090597] pid_max: default: 32768 minimum: 301
+[    0.095381] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.101987] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.113386] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.123227] futex hash table entries: 256 (order: -1, 3072 bytes)
+[    0.130248] NET: Registered protocol family 16
+[    0.135137] ramoops: using module parameters
+[    0.139628] pstore: Registered ramoops as persistent store backend
+[    0.145842] ramoops: attached 0xc800@0x3ff3800, ecc: 0/0
+[    0.152760] MIPS: machine is Generic AR71XX/AR724X/AR913X based board
+[    0.159242] calling mips_machine_setup on mips_machtype:eb
+[    0.164731] MIPS: machine is Ubiquiti UniFi
+[    0.168902] ubnt_unifi_setup:236 board_id:e502
+[    0.615631] registering PCI controller with io_map_base unset
+[    0.621586] Can't analyze schedule() prologue at 8006722c
+[    0.641749] PCI host bridge to bus 0000:00
+[    0.645861] pci_bus 0000:00: root bus resource [mem 0x10000000-0x13ffffff]
+[    0.652779] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.658342] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    0.665135] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    0.673130] pci 0000:00:00.0: fixup device configuration
+[    0.680705] pci 0000:00:00.0: BAR 0: assigned [mem 0x10000000-0x1000ffff 64bit]
+[    0.688017] pci 0000:00:00.0: using irq 40 for pin 1
+[    0.693187] lo: assigned ifindex: 1
+[    0.697526] clocksource: Switched to clocksource MIPS
+[    0.704354] NET: Registered protocol family 2
+[    0.709969] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.716947] TCP bind hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.723374] TCP: Hash tables configured (established 1024 bind 1024)
+[    0.729885] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.735733] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.742383] NET: Registered protocol family 1
+[   11.893172] Crashlog allocated RAM at address 0x3ef3000
+[   11.920377] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[   11.926197] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[   11.939727] io scheduler noop registered
+[   11.943650] io scheduler deadline registered (default)
+[   11.949081] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[   11.976040] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11, base_baud = 12500000) is a 16550A
+[   11.988800] m25p80 spi0.0: mx25l6405d (8192 Kbytes)
+[   11.993705] 5 cmdlinepart partitions found on MTD device ar7240-nor0
+[   12.000103] Creating 5 MTD partitions on "ar7240-nor0":
+[   12.005331] 0x000000000000-0x000000040000 : "u-boot"
+[   12.013561] 0x000000040000-0x000000050000 : "u-boot-env"
+[   12.021327] 0x000000050000-0x0000007b0000 : "kernel"
+[   12.028691] 0x0000007b0000-0x0000007f0000 : "cfg"
+[   12.035697] 0x0000007f0000-0x000000800000 : "EEPROM"
+[   12.047146] libphy: ag71xx_mdio: probed
+[   15.647678] ag71xx ag71xx.0: connected to PHY at ag71xx-mdio.1:04 [uid=0000d041, driver=Generic PHY]
+[   15.656835] eth0: assigned ifindex: 2
+[   15.661423] eth0: Atheros AG71xx at 0xb9000000, irq 4, mode:MII
+[   16.249296] ag71xx-mdio.1: Found an AR7240/AR9330 built-in switch
+[   16.291052] eth1: assigned ifindex: 3
+[   16.295623] eth1: Atheros AG71xx at 0xba000000, irq 5, mode:GMII
+[   16.304445] NET: Registered protocol family 10
+[   16.314519] NET: Registered protocol family 17
+[   16.319128] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[   16.331853] 8021q: 802.1Q VLAN Support v1.8
+[   16.336889] bootconsole [early0] disabled
