@@ -1,0 +1,14 @@
+
+---
+
+## 📄 4. `evidence/network_services.txt`
+netstat -tulpn (from inside AP, as root)
+
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name
+tcp 0 0 0.0.0.0:22 0.0.0.0:* LISTEN 1386/dropbear
+tcp 0 0 :::22 :::* LISTEN 1386/dropbear
+udp 0 0 0.0.0.0:10001 0.0.0.0:* 1228/mcad
+udp 0 0 0.0.0.0:32911 0.0.0.0:* 1223/ntpclient
+udp 0 0 0.0.0.0:55517 0.0.0.0:* 1228/mcad
+udp 0 0 :::37511 :::* 1228/mcad
