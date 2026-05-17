@@ -8,7 +8,7 @@
 | Baud rate | 115200, 8N1 |
 | Access | Boot logs printed, can interrupt autoboot |
 
-![UART header on PCB](images/uart y jtag.jpeg?raw=true)
+![UART header on PCB](images/uart y jtag.jpeg)
 
 **U-Boot access** (no password):
 
