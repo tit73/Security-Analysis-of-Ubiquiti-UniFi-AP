@@ -18,6 +18,8 @@
 | SSH uses deprecated `ssh-rsa` | Low | Needs client workaround `-o HostKeyAlgorithms=+ssh-rsa` |
 | No web interface active | Informational | Only SSH and discovery services |
 
+📸 **Photos of the PCB** (UART pins, JTAG header): see [`/images`](/images) folder.
+
 
 ## Evidence
 
