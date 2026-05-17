@@ -1,0 +1,36 @@
+uname -a
+
+Linux UBNT-BZ.v4.3.28 4.4.153 #0 Thu Aug 30 12:10:54 2018 mips GNU/Linux
+cat /etc/openwrt_release
+
+DISTRIB_ID='LEDE'
+DISTRIB_RELEASE='17.01.6'
+DISTRIB_REVISION='r3979-2252731af4'
+DISTRIB_CODENAME='reboot'
+DISTRIB_TARGET='ar71xx/ubntgen1'
+DISTRIB_ARCH='mips_24kc'
+DISTRIB_DESCRIPTION='LEDE Reboot 17.01.6 r3979-2252731af4'
+DISTRIB_TAINTS='no-all mklibs busybox'
+cat /proc/cpuinfo
+
+system type : Atheros AR7241 rev 1
+machine : Ubiquiti UniFi
+processor : 0
+cpu model : MIPS 24Kc V7.4
+BogoMIPS : 265.42
+wait instruction : yes
+microsecond timers : yes
+tlb_entries : 16
+extra interrupt vector : yes
+hardware watchpoint : yes, count: 4, address/irw mask: [0x0ffc, 0x0ffc, 0x0ffb, 0x0ffb]
+isa : mips1 mips2 mips32r1 mips32r2
+ASEs implemented : mips16
+shadow register sets : 1
+kscratch registers : 0
+package : 0
+core : 0
+VCED exceptions : not available
+VCEI exceptions : not available
+id
+
+uid=0(ubnt) gid=0(root) groups=0(root)
